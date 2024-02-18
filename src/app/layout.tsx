@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components";
 
 export const metadata: Metadata = {
     // company name
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang='en'>
-            <body>{children}</body>
+            <body>
+                <Navbar />
+                {children}
+            </body>
         </html>
     );
 }
