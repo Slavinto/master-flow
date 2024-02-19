@@ -28,6 +28,7 @@ const config: Config = {
                 "dark-blue": "#17154b",
                 "darker-blue": "#0A083B",
                 "light-gray": "#959ead",
+                "stroke-gray": "#E5E5E5",
                 "light-green": "#36b37e",
             },
             boxShadow: {
