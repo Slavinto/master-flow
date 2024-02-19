@@ -34,6 +34,9 @@ const config: Config = {
             boxShadow: {
                 "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
             },
+            backgroundColor: {
+                "gray-canvas": "#E5E5E5",
+            },
             backgroundImage: {
                 hero: "url('assets/images/collection-background.svg')",
                 card: "url('assets/images/thumbnail-background.svg')",

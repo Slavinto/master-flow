@@ -17,7 +17,7 @@
 @layer base {
     html {
         /* Insert a most commonly used font properties here */
-        @apply font-semibold text-darker-blue;
+        @apply font-semibold text-darker-blue bg-white;
     }
 }
 
@@ -69,7 +69,11 @@
         @apply sm:pb-24 pb-12;
     }
 
-    .info-text {
-        @apply font-montserrat text-slate-gray text-lg leading-7;
+    .text-page-active {
+        @apply text-darker-blue;
+    }
+
+    .text-thin {
+        @apply text-dark text-base font-medium;
     }
 }
