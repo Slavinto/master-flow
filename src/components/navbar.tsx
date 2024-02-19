@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from ".";
+import { BurgerMenu } from ".";
 
 const Navbar = () => {
     const pathname = usePathname();
@@ -20,7 +21,7 @@ const Navbar = () => {
                 height={32}
                 alt='master flow icon'
             />
-            <ul className='flex items-center gap-[44px] mx-[44px] '>
+            <ul className='flex-lg mx-[44px] '>
                 {navbarItems.map((listItem) => {
                     const item = listItem.split(" ").join("").toLowerCase();
                     return (
@@ -40,7 +41,7 @@ const Navbar = () => {
                     );
                 })}
             </ul>
-            <div className='flex gap-[44px] items-center'>
+            <div className='flex-lg'>
                 <Link href='/login'>Log&nbsp;In</Link>
                 <Button
                     title={"Get Started"}
@@ -48,6 +49,7 @@ const Navbar = () => {
                     classNames='w-40 h-[52px] border-[1.4px] border-stroke-gray rounded-full'
                 />
             </div>
+            <BurgerMenu />
         </nav>
     );
 };

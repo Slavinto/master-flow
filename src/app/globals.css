@@ -73,6 +73,10 @@
         @apply text-darker-blue;
     }
 
+    .flex-lg {
+        @apply hidden lg:flex items-center gap-[44px];
+    }
+
     .text-thin {
         @apply text-dark text-base font-medium;
     }
