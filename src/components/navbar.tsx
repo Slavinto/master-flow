@@ -22,20 +22,19 @@ const Navbar = () => {
                 alt='master flow icon'
             />
             <ul className='flex-lg mx-[44px] '>
-                {navbarItems.map((listItem) => {
-                    const item = listItem.split(" ").join("").toLowerCase();
+                {navbarItems.map((item) => {
+                    // const item = listItem.split(" ").join("").toLowerCase();
                     return (
-                        <li key={item}>
+                        <li key={item.link}>
                             <Link
                                 className={
-                                    pathname === `/${item}` ||
-                                    (item === "home" && pathname === "/")
+                                    pathname === item.link
                                         ? `text-page-active`
                                         : ``
                                 }
-                                href={item === "home" ? "/" : `/${item}`}
+                                href={item.link}
                             >
-                                {listItem}
+                                {item.name}
                             </Link>
                         </li>
                     );

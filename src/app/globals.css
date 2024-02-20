@@ -73,7 +73,20 @@
         @apply text-darker-blue;
     }
 
+    .container-sm {
+        @apply max-w-[1200px];
+    }
+
+    .container-md {
+        @apply max-w-[1260px];
+    }
+
+    .container-lg {
+        @apply max-w-[1320px];
+    }
+
     .flex-lg {
+        /* hides items when screen-size < lg */
         @apply hidden lg:flex items-center gap-[44px];
     }
 
