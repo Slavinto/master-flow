@@ -13,7 +13,7 @@ const Navbar = () => {
     const pathname = usePathname();
     console.log(pathname);
     return (
-        <nav className='padding-x w-full flex items-center justify-between h-[132px] text-thin max-w-[1440px] mx-auto'>
+        <nav className='relative bg-white z-10 padding-x w-full flex items-center justify-between h-[132px] text-thin max-w-[1440px] mx-auto'>
             <Image
                 src={"/static/assets/icons/logo.svg"}
                 className=''
