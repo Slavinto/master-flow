@@ -19,25 +19,29 @@ export const navbarItems = [
 
 export const footerItems = [
     {
-        menu: [
+        name: "menu",
+        links: [
             {
                 name: "Home",
                 link: "/",
-            },
-            {
-                name: "Prices",
-                link: "/prices",
             },
             {
                 name: "Services",
                 link: "/services",
             },
             {
+                name: "Prices",
+                link: "/prices",
+            },
+            {
                 name: "Contact Us",
                 link: "/contact-us",
             },
         ],
-        socials: [
+    },
+    {
+        name: "socials",
+        links: [
             {
                 name: "Facebook",
                 link: "#",
