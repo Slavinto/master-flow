@@ -19,7 +19,12 @@ const config: Config = {
             "8xl": ["96px", "106px"],
         },
         fontFamily: {
+            light: ["Gilroy-Light", "sans-serif"],
             sans: ["Gilroy-Regular", "sans-serif"],
+            medium: ["Gilroy-Medium", "sans-serif"],
+            semibold: ["Gilroy-Semibold", "sans-serif"],
+            bold: ["Gilroy-Bold", "sans-serif"],
+            extrabold: ["Gilroy-ExtraBold", "sans-serif"],
         },
         extend: {
             colors: {

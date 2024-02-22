@@ -6,11 +6,11 @@ const Hero = () => {
     return (
         <section className='container-sm flex mx-auto items-center justify-between mt-8 mb-44'>
             <article className='flex flex-col max-w-[500px]'>
-                <p className='font-bold text-sm text-primary pb-4'>WELCOME!</p>
+                <p className='subheading'>WELCOME!</p>
                 <h1 className='font-semibold text-[62px] leading-[72px] pb-5'>
                     The best way for your startup.
                 </h1>
-                <p className='text-lg font-normal pb-8'>
+                <p className='text-lg font-normal pb-8 font-sans'>
                     You can create your own design process with master. They are
                     blocks designed to carry on with the times with your
                     customers. Modern, minimal blocks with a cool look.

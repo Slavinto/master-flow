@@ -3,8 +3,28 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: "Gilroy-Light";
+    src: url("/fonts/Gilroy-Light/Gilroy-Light.woff2");
+}
+@font-face {
     font-family: "Gilroy-Regular";
-    src: url("/public/fonts/Gilroy-Regular/Gilroy-Regular.woff2");
+    src: url("/fonts/Gilroy-Regular/Gilroy-Regular.woff");
+}
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("/fonts/Gilroy-Medium/Gilroy-Medium.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Semibold";
+    src: url("/fonts/Gilroy-Semibold/Gilroy-Semibold.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("/fonts/Gilroy-Bold/Gilroy-Bold.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Extrabold";
+    src: url("/fonts/Gilroy-Extrabold/Gilroy-Extrabold.woff2");
 }
 
 * {
@@ -39,6 +59,10 @@
 @layer utilities {
     .flex-center {
         @apply flex items-center justify-center;
+    }
+
+    .subheading {
+        @apply font-bold text-sm text-primary pb-4;
     }
 
     .padding {

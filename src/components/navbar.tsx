@@ -21,9 +21,8 @@ const Navbar = () => {
                 height={32}
                 alt='master flow icon'
             />
-            <ul className='flex-lg mx-[44px] '>
+            <ul className='flex-lg mx-[44px] font-medium'>
                 {navbarItems.map((item) => {
-                    // const item = listItem.split(" ").join("").toLowerCase();
                     return (
                         <li key={item.link}>
                             <Link
