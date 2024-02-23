@@ -43,6 +43,7 @@ const config: Config = {
             },
             backgroundColor: {
                 "gray-canvas": "#E5E5E5",
+                "gray-canvas2": "#f4f4f4",
             },
             backgroundImage: {
                 hero: "url('assets/images/collection-background.svg')",

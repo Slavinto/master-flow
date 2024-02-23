@@ -84,3 +84,24 @@ export const customerLogos = [
         path: "/static/assets/icons/airbnb.svg",
     },
 ];
+
+export const habits = [
+    {
+        text: "50 Blocks",
+    },
+    {
+        text: "Communications",
+    },
+    {
+        text: "Only Explorations",
+    },
+    {
+        text: "Weekly Analytics",
+    },
+    {
+        text: "Teamwork Always",
+    },
+    {
+        text: "Update for Brand",
+    },
+];

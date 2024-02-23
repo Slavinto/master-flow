@@ -73,6 +73,7 @@ main {
     .section-main-text {
         @apply font-semibold text-4xl;
     }
+
     .article-regular-text {
         @apply text-lg text-dark font-sans font-normal;
     }
