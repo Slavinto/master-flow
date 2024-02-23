@@ -35,6 +35,10 @@
     scroll-behavior: smooth;
 }
 
+main {
+    @apply flex flex-col container-sm mx-auto;
+}
+
 @layer base {
     html {
         /* Insert a most commonly used font properties here */

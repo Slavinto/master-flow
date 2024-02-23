@@ -1,11 +1,11 @@
-import { Button, Customers, Hero } from "@/components";
-import Image from "next/image";
+import { Customers, Hero, Offices } from "@/components";
 
 export default function Home() {
     return (
         <main>
             <Hero />
             <Customers />
+            <Offices />
         </main>
     );
 }

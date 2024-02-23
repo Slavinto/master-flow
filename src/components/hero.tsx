@@ -4,7 +4,7 @@ import { Button } from ".";
 
 const Hero = () => {
     return (
-        <section className='container-sm flex mx-auto items-center justify-between mt-8 mb-44'>
+        <section className='container-sm flex items-center justify-between mt-8 mb-44'>
             <article className='flex flex-col max-w-[500px]'>
                 <p className='subheading'>WELCOME!</p>
                 <h1 className='font-semibold text-[62px] leading-[72px] pb-5'>
