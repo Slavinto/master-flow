@@ -61,3 +61,26 @@ export const footerItems = [
         ],
     },
 ];
+
+export const customerLogos = [
+    {
+        name: "slack",
+        path: "/static/assets/icons/slack.svg",
+    },
+    {
+        name: "netflix",
+        path: "/static/assets/icons/netflix.svg",
+    },
+    {
+        name: "fitbit",
+        path: "/static/assets/icons/fitbit.svg",
+    },
+    {
+        name: "google",
+        path: "/static/assets/icons/google.svg",
+    },
+    {
+        name: "airbnb",
+        path: "/static/assets/icons/airbnb.svg",
+    },
+];

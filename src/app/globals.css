@@ -8,7 +8,8 @@
 }
 @font-face {
     font-family: "Gilroy-Regular";
-    src: url("/fonts/Gilroy-Regular/Gilroy-Regular.woff");
+    font-weight: 400;
+    src: url("/fonts/Gilroy-Regular/Gilroy-Regular.woff2");
 }
 @font-face {
     font-family: "Gilroy-Medium";
@@ -62,7 +63,14 @@
     }
 
     .subheading {
-        @apply font-bold text-sm text-primary pb-4;
+        @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
+    }
+
+    .section-main-text {
+        @apply font-semibold text-4xl;
+    }
+    .article-regular-text {
+        @apply text-lg text-dark font-sans font-normal;
     }
 
     .padding {

@@ -15,7 +15,7 @@ const config: Config = {
             xl: ["20px", "24.38px"],
             "2xl": ["24px", "29.26px"],
             "3xl": ["28px", "50px"],
-            "4xl": ["48px", "58px"],
+            "4xl": ["48px", "60px"],
             "8xl": ["96px", "106px"],
         },
         fontFamily: {
@@ -34,6 +34,8 @@ const config: Config = {
                 "darker-blue": "#0A083B",
                 "light-gray": "#959ead",
                 "stroke-gray": "#E5E5E5",
+                "stroke-gray2": "#d8d8d8",
+                "stroke-gray3": "rgba(216, 216, 216, 0.38)",
                 "light-green": "#36b37e",
             },
             boxShadow: {
