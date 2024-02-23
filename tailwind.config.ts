@@ -13,7 +13,7 @@ const config: Config = {
             base: ["16px", "19.5px"],
             lg: ["18px", "32px"],
             xl: ["20px", "24.38px"],
-            "2xl": ["24px", "29.26px"],
+            "2xl": ["24px", "34px"],
             "3xl": ["28px", "50px"],
             "4xl": ["48px", "60px"],
             "8xl": ["96px", "106px"],

@@ -7,3 +7,4 @@ export { default as Customers } from "./customers";
 export { default as Offices } from "./offices";
 export { default as Habits } from "./habits";
 export { default as Experiences } from "./experiences";
+export { default as BlogPostCard } from "./blog-post-card";

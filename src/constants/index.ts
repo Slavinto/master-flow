@@ -105,3 +105,24 @@ export const habits = [
         text: "Update for Brand",
     },
 ];
+
+export const postCardsExperiences = [
+    {
+        imgUrl: "/static/assets/images/Base.png",
+        category: "products",
+        title: "All our physical products that we have branded and sold",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/Base2.png",
+        category: "marketing",
+        title: "Our statistics in our latest developed ecommerce",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/Base3.png",
+        category: "wireframe",
+        title: "The strategy we use to reach your goal quickly",
+        postUrl: "#",
+    },
+];
