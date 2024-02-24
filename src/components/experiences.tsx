@@ -6,7 +6,7 @@ const Experiences = () => {
     return (
         <section className='relative mb-[140px] flex flex-col gap-[60px]'>
             <h2 className='section-main-text'>Our latest experiences</h2>
-            <div className='flex justify-between relative z-10'>
+            <div className='flex gap-2 justify-between relative z-10'>
                 {postCardsExperiences.map((item) => (
                     <BlogPostCard
                         key={item.title}
