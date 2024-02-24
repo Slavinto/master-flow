@@ -71,7 +71,7 @@ main {
     .btn-white {
         @apply text-primary bg-white;
     }
-
+    /* complete button styles */
     .btn-primary-rounded {
         @apply btn btn-primary rounded-full;
     }
@@ -83,6 +83,7 @@ main {
     .btn-white-rounded {
         @apply btn btn-white border-stroke-gray rounded-full;
     }
+    /* ================================ */
 }
 
 @layer utilities {
