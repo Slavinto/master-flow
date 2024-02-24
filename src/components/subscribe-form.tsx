@@ -53,7 +53,7 @@ const SubscribeForm = () => {
                         <Button
                             title='Submit'
                             type='submit'
-                            classNames='text-white bg-primary rounded h-[46px] w-[133px] mr-[6px]'
+                            classNames='btn-form-primary mr-[6px]'
                         />
                     </div>
                 </form>
