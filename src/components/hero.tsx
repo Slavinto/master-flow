@@ -19,12 +19,12 @@ const Hero = () => {
                     <Button
                         type='button'
                         title='Get Started'
-                        classNames='w-[180px] h-[62px] border-[1.4px] bg-primary text-white font-semibold text-[17px] rounded-full'
+                        classNames='btn-primary-rounded'
                     />
                     <Button
                         type='button'
                         title='Learn More'
-                        classNames='w-[180px] h-[62px] border-[1.4px] border-stroke-gray rounded-full'
+                        classNames='btn-white-rounded'
                     />
                 </div>
             </article>

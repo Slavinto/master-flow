@@ -56,8 +56,32 @@ main {
         @apply sm:flex-1 max-sm:w-full text-base leading-normal text-light-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-light-gray max-sm:rounded-full;
     }
 
-    .btn_common {
-        @apply flex rounded-full bg-coral-red py-3 px-8 text-white text-lg font-normal items-center justify-center gap-4 border font-montserrat leading-none border-coral-red;
+    .btn {
+        @apply w-[180px] h-[62px] border-[1.4px] font-semibold text-[17px];
+    }
+
+    .btn-form {
+        @apply btn w-[133px] h-[46px];
+    }
+
+    .btn-primary {
+        @apply bg-primary !text-white;
+    }
+
+    .btn-white {
+        @apply text-primary bg-white;
+    }
+
+    .btn-primary-rounded {
+        @apply btn btn-primary rounded-full;
+    }
+
+    .btn-form-primary {
+        @apply btn-form btn-primary rounded;
+    }
+
+    .btn-white-rounded {
+        @apply btn btn-white border-stroke-gray rounded-full;
     }
 }
 
