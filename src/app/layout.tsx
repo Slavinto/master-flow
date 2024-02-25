@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
+import type { Metadata } from "next";
 import { Footer, Navbar } from "@/components";
+import { SessionProvider } from "next-auth/react";
 
 export const metadata: Metadata = {
     // company name
