@@ -95,6 +95,11 @@ main {
         @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
     }
 
+    /* in 1st section of a page */
+    .page-main-text {
+        @apply font-semibold text-[62px];
+    }
+
     .section-main-text {
         @apply font-semibold text-4xl;
     }
