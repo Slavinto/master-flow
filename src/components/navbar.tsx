@@ -3,6 +3,7 @@
 import { navbarItems } from "@/constants";
 
 import { usePathname } from "next/navigation";
+import { signIn, signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -11,7 +12,8 @@ import { BurgerMenu } from ".";
 
 const Navbar = () => {
     const pathname = usePathname();
-    console.log(pathname);
+    const { data: session } = useSession();
+
     return (
         <nav className='relative bg-white z-10 padding-x w-full flex items-center justify-between h-[132px] text-thin max-w-[1440px] mx-auto'>
             <Image
@@ -40,7 +42,27 @@ const Navbar = () => {
                 })}
             </ul>
             <div className='flex-lg'>
-                <Link href='/login'>Log&nbsp;In</Link>
+                {!session?.user?.name ? (
+                    <Link onClick={() => signIn()} href='#'>
+                        Log&nbsp;In
+                    </Link>
+                ) : (
+                    <>
+                        <Link
+                            href='/profile'
+                            className={
+                                pathname === "/profile"
+                                    ? "text-page-active"
+                                    : ""
+                            }
+                        >
+                            My&nbsp;Profile
+                        </Link>
+                        <Link onClick={() => signOut()} href=''>
+                            Log&nbsp;Out
+                        </Link>
+                    </>
+                )}
                 <Button
                     title={"Get Started"}
                     type='button'

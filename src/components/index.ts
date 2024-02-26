@@ -10,3 +10,4 @@ export { default as Experiences } from "./experiences";
 export { default as BlogPostCard } from "./blog-post-card";
 export { default as SubscribeForm } from "./subscribe-form";
 export { default as Tricks } from "./tricks";
+export { default as SessionProvider } from "./session-provider";
