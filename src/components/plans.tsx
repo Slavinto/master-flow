@@ -1,4 +1,9 @@
+"use client";
+
 import React from "react";
+import { styled } from "@mui/material";
+import Switch, { switchClasses } from "@mui/material/Switch";
+import { CustomSwitch } from ".";
 
 const Plans = () => {
     return (
@@ -12,9 +17,9 @@ const Plans = () => {
                     stratup and agency. It starts from here! You can teach
                     yourself what you really like.
                 </p>
-                <div className='flex gap-2,5 text-darker-blue font-semibold text-base'>
+                <div className='flex items-center gap-2,5 text-darker-blue font-semibold text-base'>
                     <p>Bill Monthly</p>
-                    <div>Switch</div>
+                    <CustomSwitch defaultChecked />
                     <p>Bill Annually</p>
                 </div>
             </article>
