@@ -14,14 +14,12 @@ export default function CustomSwitch(props: UseSwitchParameters) {
         "Switch-focusVisible": focusVisible,
     };
 
+    // primary: #175cff
+
     return (
         <BasicSwitchRoot className={clsx(stateClasses, "bg-primary")}>
             <BasicSwitchThumb className={clsx(stateClasses)} />
-            <BasicSwitchInput
-                {...getInputProps()}
-                aria-label='switch'
-                className={clsx("")}
-            />
+            <BasicSwitchInput {...getInputProps()} aria-label='switch' />
         </BasicSwitchRoot>
     );
 }
