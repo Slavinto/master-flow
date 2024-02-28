@@ -15,3 +15,14 @@ export type PostCardProps = {
 
 export type PostCard = FC<PostCardProps>;
 // ===================================================
+export type PriceCard = {
+    price: number;
+    title: string;
+    description: string;
+    features: string[];
+    buttonText: string;
+};
+
+export type PlanCardProps = { card: PriceCard };
+// ===================================================
+// ===================================================

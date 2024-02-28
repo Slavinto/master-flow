@@ -83,7 +83,25 @@ main {
     .btn-white-rounded {
         @apply btn btn-white border-stroke-gray rounded-full;
     }
-    /* ================================ */
+    /* ================================price plan card styles================================ */
+    .card-price {
+        @apply font-semibold text-[40px];
+    }
+    .card-per-month {
+        @apply text-base font-semibold text-dark;
+    }
+    .card-title {
+        @apply leading-8 font-semibold text-[30px];
+    }
+    .card-description {
+        @apply text-[16px] leading-7 font-normal font-sans;
+    }
+    .card-features-text {
+        @apply font-semibold text-[16px] text-darker-blue;
+    }
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
 }
 
 @layer utilities {

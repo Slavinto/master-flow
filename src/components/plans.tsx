@@ -3,13 +3,15 @@
 import React, { useState } from "react";
 import { styled } from "@mui/material";
 import Switch, { switchClasses } from "@mui/material/Switch";
-import { CustomSwitch } from ".";
+import { CustomSwitch, PlanCard } from ".";
+
+import { planCards } from "@/constants";
 
 const Plans = () => {
     const [billAnnually, setBillAnnually] = useState(true);
 
     return (
-        <section className='flex flex-col items-center'>
+        <section className='flex flex-col items-center mb-[140px]'>
             <article className='pb-[100px] flex gap-5 flex-col  max-w-[900px] items-center text-center'>
                 <h2 className='page-main-text'>
                     Our plans for your strategies.
@@ -28,7 +30,11 @@ const Plans = () => {
                     <p>Bill Annually</p>
                 </div>
             </article>
-            <section></section>
+            <section className='flex gap-14'>
+                {planCards.map((card) => (
+                    <PlanCard card={card} key={card.title} />
+                ))}
+            </section>
         </section>
     );
 };
