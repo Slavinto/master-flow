@@ -28,6 +28,7 @@ const Plans = () => {
                     <p>Bill Annually</p>
                 </div>
             </article>
+            <section></section>
         </section>
     );
 };
