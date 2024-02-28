@@ -16,6 +16,7 @@ export type PostCardProps = {
 export type PostCard = FC<PostCardProps>;
 // ===================================================
 export type PriceCard = {
+    preferred: boolean;
     price: number;
     title: string;
     description: string;

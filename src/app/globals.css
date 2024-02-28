@@ -104,6 +104,9 @@ main {
     .card-features-text {
         @apply font-semibold text-[16px] text-darker-blue;
     }
+    .card-button {
+        @apply btn-white rounded-full border-primary border-[3px] w-full h-[60px];
+    }
     /* ================================ ================================ */
     /* ================================ ================================ */
     /* ================================ ================================ */

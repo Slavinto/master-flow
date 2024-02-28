@@ -129,6 +129,7 @@ export const postCardsExperiences = [
 
 export const planCards = [
     {
+        preferred: false,
         price: 29,
         title: "Easy",
         description:
@@ -137,6 +138,7 @@ export const planCards = [
         buttonText: "Get easy",
     },
     {
+        preferred: true,
         price: 59,
         title: "Basic",
         description: "Better for growing businesses that want more customers.",
@@ -149,6 +151,7 @@ export const planCards = [
         buttonText: "Get basic",
     },
     {
+        preferred: false,
         price: 139,
         title: "Custom",
         description: "Advanced features for pros who need more customization.",

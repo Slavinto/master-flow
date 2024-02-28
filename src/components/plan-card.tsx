@@ -1,13 +1,15 @@
 import type { PlanCardProps } from "@/types";
 import Image from "next/image";
-import { Button } from "@mui/base/Button";
+import { Button } from ".";
 
 const PlanCard = ({ card }: PlanCardProps) => {
-    const { price, title, description, features, buttonText } = card;
+    const { price, title, description, features, buttonText, preferred } = card;
     return (
-        <section className='flex gap-5 flex-col max-w-[360px] border-[1.4px] rounded border-stroke-gray px-[56px] pt-[50px] pb-9'>
+        <section className='flex gap-5 flex-col shadow-md max-w-[360px] border-[1.4px] rounded border-stroke-gray px-[56px] pt-[50px] pb-9'>
             <div className='flex gap-[5px] items-center'>
-                <h3 className='card-price'>${price}</h3>
+                <h3 className={`card-price ${preferred && "text-light-green"}`}>
+                    ${price}
+                </h3>
                 <p className='card-per-month'>/month</p>
             </div>
             <h4 className='card-title'>{title}</h4>
@@ -26,7 +28,13 @@ const PlanCard = ({ card }: PlanCardProps) => {
                     </li>
                 ))}
             </ul>
-            <Button>{buttonText}</Button>
+            <Button
+                title={buttonText}
+                type='button'
+                classNames={`card-button ${
+                    preferred && "bg-primary text-white"
+                }`}
+            />
         </section>
     );
 };

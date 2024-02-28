@@ -11,7 +11,7 @@ const Plans = () => {
     const [billAnnually, setBillAnnually] = useState(true);
 
     return (
-        <section className='flex flex-col items-center mb-[140px]'>
+        <section className='flex flex-col items-center mb-[140px] mt-[118px]'>
             <article className='pb-[100px] flex gap-5 flex-col  max-w-[900px] items-center text-center'>
                 <h2 className='page-main-text'>
                     Our plans for your strategies.
@@ -30,7 +30,7 @@ const Plans = () => {
                     <p>Bill Annually</p>
                 </div>
             </article>
-            <section className='flex gap-14'>
+            <section className='flex gap-14 items-start'>
                 {planCards.map((card) => (
                     <PlanCard card={card} key={card.title} />
                 ))}
