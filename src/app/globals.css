@@ -88,7 +88,25 @@ main {
         @apply btn-white-rounded w-[160px] h-[52px];
     }
 
-    /* ================================ */
+    /* ================================price plan card styles================================ */
+    .card-price {
+        @apply font-semibold text-[40px];
+    }
+    .card-per-month {
+        @apply text-base font-semibold text-dark;
+    }
+    .card-title {
+        @apply leading-8 font-semibold text-[30px];
+    }
+    .card-description {
+        @apply text-[16px] leading-7 font-normal font-sans;
+    }
+    .card-features-text {
+        @apply font-semibold text-[16px] text-darker-blue;
+    }
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
 }
 
 @layer utilities {
@@ -98,6 +116,11 @@ main {
 
     .subheading {
         @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
+    }
+
+    /* in 1st section of a page */
+    .page-main-text {
+        @apply font-semibold text-[62px];
     }
 
     .section-main-text {

@@ -126,3 +126,40 @@ export const postCardsExperiences = [
         postUrl: "#",
     },
 ];
+
+export const planCards = [
+    {
+        price: 29,
+        title: "Easy",
+        description:
+            "All the basics for businesses that are just getting started.",
+        features: ["One project", "Your dashboard"],
+        buttonText: "Get easy",
+    },
+    {
+        price: 59,
+        title: "Basic",
+        description: "Better for growing businesses that want more customers.",
+        features: [
+            "Two project",
+            "Your dashboard",
+            "Components included",
+            "Advanced charts",
+        ],
+        buttonText: "Get basic",
+    },
+    {
+        price: 139,
+        title: "Custom",
+        description: "Advanced features for pros who need more customization.",
+        features: [
+            "Unlimited project",
+            "Your dashboard",
+            "+300 components",
+            "Chat support",
+            "Guaranteed 100%",
+            "Unlimited users",
+        ],
+        buttonText: "Get custom",
+    },
+];

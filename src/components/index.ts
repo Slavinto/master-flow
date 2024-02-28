@@ -11,3 +11,6 @@ export { default as BlogPostCard } from "./blog-post-card";
 export { default as SubscribeForm } from "./subscribe-form";
 export { default as Tricks } from "./tricks";
 export { default as SessionProvider } from "./session-provider";
+export { default as Plans } from "./plans";
+export { default as CustomSwitch } from "./custom-switch";
+export { default as PlanCard } from "./plan-card";
