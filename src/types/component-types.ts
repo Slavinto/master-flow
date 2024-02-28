@@ -3,8 +3,8 @@ import { FC } from "react";
 export type ButtonProps = {
     classNames: string;
     title: string;
-    type?: "button" | "submit" | "reset";
-}>;
+    type?: "button" | "link";
+};
 // ===================================================
 export type PostCardProps = {
     imgUrl: string;
@@ -15,7 +15,5 @@ export type PostCardProps = {
 
 export type PostCard = FC<PostCardProps>;
 // ===================================================
-    type?: "button" | "link";
-};
 
 export type ButtonComponent = FC<ButtonProps>;

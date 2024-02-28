@@ -81,8 +81,13 @@ main {
     }
 
     .btn-white-rounded {
-        @apply btn btn-white border-stroke-gray rounded-full;
+        @apply btn btn-white border-stroke-gray rounded-full border-[1.4px];
     }
+
+    .btn-navbar-get-started {
+        @apply btn-white-rounded w-[160px] h-[52px];
+    }
+
     /* ================================ */
 }
 

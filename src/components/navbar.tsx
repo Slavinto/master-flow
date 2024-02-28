@@ -66,7 +66,7 @@ const Navbar = () => {
                 <Button
                     title={"Get Started"}
                     type='button'
-                    classNames='w-40 h-[52px] border-[1.4px] border-stroke-gray rounded-full'
+                    classNames='btn-navbar-get-started'
                 />
             </div>
             <BurgerMenu />

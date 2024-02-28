@@ -52,7 +52,7 @@ const SubscribeForm = () => {
                         />
                         <Button
                             title='Submit'
-                            type='submit'
+                            type='button'
                             classNames='btn-form-primary mr-[6px]'
                         />
                     </div>
