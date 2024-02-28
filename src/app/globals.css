@@ -3,8 +3,29 @@
 @tailwind utilities;
 
 @font-face {
+    font-family: "Gilroy-Light";
+    src: url("/fonts/Gilroy-Light/Gilroy-Light.woff2");
+}
+@font-face {
     font-family: "Gilroy-Regular";
-    src: url("/public/fonts/Gilroy-Regular/Gilroy-Regular.woff2");
+    font-weight: 400;
+    src: url("/fonts/Gilroy-Regular/Gilroy-Regular.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Medium";
+    src: url("/fonts/Gilroy-Medium/Gilroy-Medium.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Semibold";
+    src: url("/fonts/Gilroy-Semibold/Gilroy-Semibold.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Bold";
+    src: url("/fonts/Gilroy-Bold/Gilroy-Bold.woff2");
+}
+@font-face {
+    font-family: "Gilroy-Extrabold";
+    src: url("/fonts/Gilroy-Extrabold/Gilroy-Extrabold.woff2");
 }
 
 * {
@@ -14,10 +35,14 @@
     scroll-behavior: smooth;
 }
 
+main {
+    @apply flex flex-col container-sm mx-auto;
+}
+
 @layer base {
     html {
         /* Insert a most commonly used font properties here */
-        @apply font-semibold text-darker-blue;
+        @apply font-semibold text-darker-blue bg-white;
     }
 }
 
@@ -28,17 +53,54 @@
     }
 
     .input {
-        @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+        @apply sm:flex-1 max-sm:w-full text-base leading-normal text-light-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-light-gray max-sm:rounded-full;
     }
 
-    .btn_common {
-        @apply flex rounded-full bg-coral-red py-3 px-8 text-white text-lg font-normal items-center justify-center gap-4 border font-montserrat leading-none border-coral-red;
+    .btn {
+        @apply w-[180px] h-[62px] border-[1.4px] font-semibold text-[17px];
     }
+
+    .btn-form {
+        @apply btn w-[133px] h-[46px];
+    }
+
+    .btn-primary {
+        @apply bg-primary !text-white;
+    }
+
+    .btn-white {
+        @apply text-primary bg-white;
+    }
+    /* complete button styles */
+    .btn-primary-rounded {
+        @apply btn btn-primary rounded-full;
+    }
+
+    .btn-form-primary {
+        @apply btn-form btn-primary rounded;
+    }
+
+    .btn-white-rounded {
+        @apply btn btn-white border-stroke-gray rounded-full;
+    }
+    /* ================================ */
 }
 
 @layer utilities {
     .flex-center {
         @apply flex items-center justify-center;
+    }
+
+    .subheading {
+        @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
+    }
+
+    .section-main-text {
+        @apply font-semibold text-4xl;
+    }
+
+    .article-regular-text {
+        @apply text-lg text-dark font-sans font-normal;
     }
 
     .padding {
@@ -69,7 +131,28 @@
         @apply sm:pb-24 pb-12;
     }
 
-    .info-text {
-        @apply font-montserrat text-slate-gray text-lg leading-7;
+    .text-page-active {
+        @apply text-darker-blue;
+    }
+
+    .container-sm {
+        @apply max-w-[1200px];
+    }
+
+    .container-md {
+        @apply max-w-[1260px];
+    }
+
+    .container-lg {
+        @apply max-w-[1320px];
+    }
+
+    .flex-lg {
+        /* hides items when screen-size < lg */
+        @apply hidden lg:flex items-center gap-[44px];
+    }
+
+    .text-thin {
+        @apply text-dark text-base font-medium;
     }
 }

@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components";
+import type { Metadata } from "next";
+import { Footer, Navbar, SessionProvider } from "@/components";
+import { getServerSession } from "next-auth";
 
 export const metadata: Metadata = {
     // company name
@@ -10,16 +11,20 @@ export const metadata: Metadata = {
         "All services for our team of industry experts, personal training, support line and help desk.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const session = await getServerSession();
     return (
         <html lang='en'>
             <body>
-                <Navbar />
-                {children}
+                <SessionProvider session={session}>
+                    <Navbar />
+                    {children}
+                    <Footer />
+                </SessionProvider>
             </body>
         </html>
     );

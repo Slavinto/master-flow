@@ -11,15 +11,20 @@ const config: Config = {
             xs: ["12px", "16px"],
             sm: ["14px", "20px"],
             base: ["16px", "19.5px"],
-            lg: ["18px", "21.94px"],
+            lg: ["18px", "32px"],
             xl: ["20px", "24.38px"],
-            "2xl": ["24px", "29.26px"],
+            "2xl": ["24px", "34px"],
             "3xl": ["28px", "50px"],
-            "4xl": ["48px", "58px"],
+            "4xl": ["48px", "60px"],
             "8xl": ["96px", "106px"],
         },
         fontFamily: {
+            light: ["Gilroy-Light", "sans-serif"],
             sans: ["Gilroy-Regular", "sans-serif"],
+            medium: ["Gilroy-Medium", "sans-serif"],
+            semibold: ["Gilroy-Semibold", "sans-serif"],
+            bold: ["Gilroy-Bold", "sans-serif"],
+            extrabold: ["Gilroy-ExtraBold", "sans-serif"],
         },
         extend: {
             colors: {
@@ -29,10 +34,16 @@ const config: Config = {
                 "darker-blue": "#0A083B",
                 "light-gray": "#959ead",
                 "stroke-gray": "#E5E5E5",
+                "stroke-gray2": "#d8d8d8",
+                "stroke-gray3": "rgba(216, 216, 216, 0.38)",
                 "light-green": "#36b37e",
             },
             boxShadow: {
                 "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
+            },
+            backgroundColor: {
+                "gray-canvas": "#E5E5E5",
+                "gray-canvas2": "#f4f4f4",
             },
             backgroundImage: {
                 hero: "url('assets/images/collection-background.svg')",
