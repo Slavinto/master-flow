@@ -1,7 +1,9 @@
 import { FC } from "react";
 
-export type ButtonComponent = FC<{
+export type ButtonProps = {
     classNames: string;
     title: string;
-    type?: "button" | "submit" | "reset";
-}>;
+    type?: "button" | "link";
+};
+
+export type ButtonComponent = FC<ButtonProps>;
