@@ -1,6 +1,4 @@
-import { customerLogos } from "@/constants";
-import Image from "next/image";
-import Link from "next/link";
+import { CustomerLogos } from ".";
 
 const Customers = () => {
     return (
@@ -18,18 +16,7 @@ const Customers = () => {
                         education.
                     </p>
                 </article>
-                <div className='flex gap-[120px]'>
-                    {customerLogos.map((logo) => (
-                        <Link href='#' key={logo.name}>
-                            <Image
-                                src={logo.path}
-                                width={135}
-                                height={40}
-                                alt='customers logo'
-                            />
-                        </Link>
-                    ))}
-                </div>
+                <CustomerLogos />
             </div>
         </section>
     );

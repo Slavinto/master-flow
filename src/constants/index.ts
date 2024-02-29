@@ -166,3 +166,26 @@ export const planCards = [
         buttonText: "Get custom",
     },
 ];
+
+export const servicesItems = [
+    {
+        iconPath: "/static/assets/icons/services-1.svg",
+        title: "Analytics Tools",
+        text: "With analytics tools, to help you share with current and future clients.",
+    },
+    {
+        iconPath: "/static/assets/icons/services-2.svg",
+        title: "Total Collections",
+        text: "Total collections, quoting, enrollment, and reporting in Italian and English.",
+    },
+    {
+        iconPath: "/static/assets/icons/services-3.svg",
+        title: "All Services",
+        text: "All services for our team of industry experts, personal training, support line and help desk.",
+    },
+    {
+        iconPath: "/static/assets/icons/services-4.svg",
+        title: "Work With Us",
+        text: "We can help you set up and manager your groups if you are become our partner.",
+    },
+];

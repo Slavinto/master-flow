@@ -107,6 +107,13 @@ main {
     .card-button {
         @apply btn-white rounded-full border-primary border-[3px] w-full h-[60px];
     }
+    /* ================================ services section ================================ */
+    .services-title {
+        @apply text-darker-blue font-semibold text-2xl leading-none;
+    }
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
     /* ================================ ================================ */
     /* ================================ ================================ */
     /* ================================ ================================ */
@@ -119,6 +126,10 @@ main {
 
     .subheading {
         @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
+    }
+
+    .subheading-premium-container {
+        @apply font-bold text-sm text-primary bg-primary-transparent px-[15px] py-[7px] uppercase tracking-[1px] rounded-full;
     }
 
     /* in 1st section of a page */
