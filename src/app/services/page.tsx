@@ -1,7 +1,11 @@
-import React from "react";
+import { Startups } from "@/components";
 
 const Services = () => {
-    return <div>Services</div>;
+    return (
+        <main>
+            <Startups />
+        </main>
+    );
 };
 
 export default Services;
