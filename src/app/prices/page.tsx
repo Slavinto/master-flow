@@ -1,4 +1,4 @@
-import { Faq, Plans, Services } from "@/components";
+import { Experiences, Faq, Plans, Services, SubscribeForm } from "@/components";
 import React from "react";
 
 const Prices = () => {
@@ -7,6 +7,12 @@ const Prices = () => {
             <Plans />
             <Services />
             <Faq />
+            <Experiences />
+            <SubscribeForm
+                textLg='Buy now Master Flow!'
+                textSm='Enter your email into form below to get Master Flow from us'
+                textBtn='Download'
+            />
         </main>
     );
 };

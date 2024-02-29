@@ -4,8 +4,9 @@ import { useState, FormEventHandler } from "react";
 import Image from "next/image";
 
 import { Button } from ".";
+import { SubscribeFormProps } from "@/types";
 
-const SubscribeForm = () => {
+const SubscribeForm = ({ textLg, textSm, textBtn }: SubscribeFormProps) => {
     const [input, setInput] = useState("");
 
     const handleSubmit: FormEventHandler = (e) => {
@@ -27,13 +28,13 @@ const SubscribeForm = () => {
                     className='flex flex-col items-center gap-3 max-w-[615px]'
                 >
                     <h2 className='w-full section-main-text text-white'>
-                        Subscribe to the newsletter!
+                        {textLg}
                     </h2>
                     <label
                         htmlFor='subscribe-home'
                         className='article-regular-text !text-white'
                     >
-                        Enter your email into form below to get updates from us
+                        {textSm}
                     </label>
                     <div className='flex gap-3 items-center max-w-[430px] h-[56px] bg-white text-light-gray font-medium text-4 mt-5 rounded'>
                         <Image
@@ -51,7 +52,7 @@ const SubscribeForm = () => {
                             className='outline-none text-dark shrink-0 grow'
                         />
                         <Button
-                            title='Submit'
+                            title={textBtn}
                             type='button'
                             classNames='btn-form-primary mr-[6px]'
                         />
