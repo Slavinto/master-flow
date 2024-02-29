@@ -1,4 +1,4 @@
-import { Plans, Services } from "@/components";
+import { Faq, Plans, Services } from "@/components";
 import React from "react";
 
 const Prices = () => {
@@ -6,6 +6,7 @@ const Prices = () => {
         <main>
             <Plans />
             <Services />
+            <Faq />
         </main>
     );
 };

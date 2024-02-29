@@ -111,7 +111,14 @@ main {
     .services-title {
         @apply text-darker-blue font-semibold text-2xl leading-none;
     }
-    /* ================================ ================================ */
+    /* ================================ most asked question ================================ */
+    .questions-question {
+        @apply text-white font-bold text-xl tracking-[0.2px];
+    }
+
+    .questions-answer {
+        @apply text-white font-sans text-lg;
+    }
     /* ================================ ================================ */
     /* ================================ ================================ */
     /* ================================ ================================ */

@@ -14,5 +14,7 @@ export { default as Tricks } from "./tricks";
 export { default as SessionProvider } from "./session-provider";
 export { default as Plans } from "./plans";
 export { default as CustomSwitch } from "./custom-switch";
+export { default as CustomAccordion } from "./custom-accordion";
 export { default as PlanCard } from "./plan-card";
 export { default as Services } from "./services";
+export { default as Faq } from "./faq";

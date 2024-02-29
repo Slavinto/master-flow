@@ -5,6 +5,8 @@ export type ButtonProps = {
     title: string;
     type?: "button" | "link";
 };
+
+export type ButtonComponent = FC<ButtonProps>;
 // ===================================================
 export type PostCardProps = {
     imgUrl: string;
@@ -26,6 +28,11 @@ export type PriceCard = {
 
 export type PlanCardProps = { card: PriceCard };
 // ===================================================
+export type AccordionProps = {
+    topText: string;
+    expandedText: string;
+};
 // ===================================================
-
-export type ButtonComponent = FC<ButtonProps>;
+// ===================================================
+// ===================================================
+// ===================================================

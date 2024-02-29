@@ -189,3 +189,26 @@ export const servicesItems = [
         text: "We can help you set up and manager your groups if you are become our partner.",
     },
 ];
+
+export const mostAskedQuestions = [
+    {
+        question: "Can I make a free plan to get started?",
+        answer: "You can pay with a credit card or via net banking (if you’re in United States). We will renew your subscription automatically at the end of every billing cycle.",
+    },
+    {
+        question: "My team wants to have a direct chat with you. How to do it?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam? Porro consequuntur eligendi maxime similique qui dolore assumenda voluptatibus inventore.",
+    },
+    {
+        question: "How can I work with you and become your partner?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam? Porro consequuntur eligendi maxime similique qui dolore assumenda voluptatibus inventore.",
+    },
+    {
+        question: "What services do your rate plans include?",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam? Porro consequuntur eligendi maxime similique qui dolore assumenda voluptatibus inventore.",
+    },
+    {
+        question: "How can i cancel all my accounts? With Custom plan.",
+        answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam? Porro consequuntur eligendi maxime similique qui dolore assumenda voluptatibus inventore.",
+    },
+];

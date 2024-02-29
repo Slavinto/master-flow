@@ -40,6 +40,7 @@ const config: Config = {
                 dark: "#57586E",
                 "dark-blue": "#17154b",
                 "darker-blue": "#0A083B",
+                "question-darker-blue": "#242256",
                 "light-gray": "#959ead",
                 "stroke-gray": "#E5E5E5",
                 "stroke-gray2": "#d8d8d8",
