@@ -37,6 +37,7 @@ export type SubscribeFormProps = {
     textLg: string;
     textSm: string;
     textBtn: string;
+    variant?: "dark" | "light";
 };
 
 // ===================================================

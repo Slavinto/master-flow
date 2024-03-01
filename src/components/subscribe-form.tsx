@@ -6,7 +6,12 @@ import Image from "next/image";
 import { Button } from ".";
 import { SubscribeFormProps } from "@/types";
 
-const SubscribeForm = ({ textLg, textSm, textBtn }: SubscribeFormProps) => {
+const SubscribeForm = ({
+    textLg,
+    textSm,
+    textBtn,
+    variant = "light",
+}: SubscribeFormProps) => {
     const [input, setInput] = useState("");
 
     const handleSubmit: FormEventHandler = (e) => {
@@ -22,7 +27,11 @@ const SubscribeForm = ({ textLg, textSm, textBtn }: SubscribeFormProps) => {
                 height={102}
                 className='absolute z-0 right-[200px] -top-10'
             />
-            <div className=' max-h-[462px] bg-primary py-[135px] px-[290px] relative z-10 flex items-center justify-center rounded'>
+            <div
+                className={`max-h-[462px] bg-${
+                    variant === "light" ? "primary" : "dark-blue"
+                } py-[135px] px-[290px] relative z-10 flex items-center justify-center rounded`}
+            >
                 <form
                     onSubmit={handleSubmit}
                     className='flex flex-col items-center gap-3 max-w-[615px]'
@@ -32,7 +41,7 @@ const SubscribeForm = ({ textLg, textSm, textBtn }: SubscribeFormProps) => {
                     </h2>
                     <label
                         htmlFor='subscribe-home'
-                        className='article-regular-text !text-white'
+                        className='article-regular-text !text-white opacity-60'
                     >
                         {textSm}
                     </label>
@@ -54,7 +63,9 @@ const SubscribeForm = ({ textLg, textSm, textBtn }: SubscribeFormProps) => {
                         <Button
                             title={textBtn}
                             type='button'
-                            classNames='btn-form-primary mr-[6px]'
+                            classNames={`btn-form-primary mr-[6px]${
+                                variant === "dark" && " bg-question-darker-blue"
+                            }`}
                         />
                     </div>
                 </form>
