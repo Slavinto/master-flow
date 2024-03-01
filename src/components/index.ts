@@ -19,3 +19,4 @@ export { default as PlanCard } from "./plan-card";
 export { default as Services } from "./services";
 export { default as Faq } from "./faq";
 export { default as Startups } from "./startups";
+export { default as WhoWeAre } from "./who-we-are";
