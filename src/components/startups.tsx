@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from ".";
 
 const Startups = () => {
@@ -21,6 +22,32 @@ const Startups = () => {
                     title='Learn More'
                     classNames='btn-white-rounded'
                 />
+            </div>
+            <div className='flex justify-between gap-8 relative mt-[140px]'>
+                <Image
+                    src={"/static/assets/patterns/shape1.svg"}
+                    alt='shape pattern'
+                    width={86}
+                    height={102}
+                    className='absolute z-0 left-[100px] -top-10'
+                />
+                <Image
+                    className='relative z-10'
+                    src={"/static/assets/images/laptop.png"}
+                    width={690}
+                    height={440}
+                    alt='a laptop on table'
+                />
+                <div className='relative'>
+                    <div className='w-full h-full bg-darker-blue absolute top-10 left-10 z-0' />
+                    <Image
+                        className='relative z-10'
+                        src={"/static/assets/images/book.png"}
+                        width={480}
+                        height={440}
+                        alt='a laptop on table'
+                    />
+                </div>
             </div>
         </section>
     );
