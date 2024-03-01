@@ -235,3 +235,36 @@ export const weDoItems = [
         text: "We can help you set up and manager your groups if you are become our partner.",
     },
 ];
+
+export const teamMembers = [
+    {
+        name: "Marc Stewart",
+        picPath: "/static/assets/images/team1.png",
+        jobTitle: "Founder and Developer",
+    },
+    {
+        name: "Lisa Lennon",
+        picPath: "/static/assets/images/team2.png",
+        jobTitle: "Product Designer",
+    },
+    {
+        name: "Pedro Stols",
+        picPath: "/static/assets/images/team3.png",
+        jobTitle: "Front-End Developer",
+    },
+    {
+        name: "Alberto Ferdy",
+        picPath: "/static/assets/images/team4.png",
+        jobTitle: "Motion Designer",
+    },
+    {
+        name: "Sofia Smith",
+        picPath: "/static/assets/images/team5.png",
+        jobTitle: "UX Designer",
+    },
+    {
+        name: "Mario Catrone",
+        picPath: "/static/assets/images/team6.png",
+        jobTitle: "Back-End Developer",
+    },
+];
