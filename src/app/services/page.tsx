@@ -1,4 +1,4 @@
-import { Startups, Strategies, WhoWeAre } from "@/components";
+import { Startups, Strategies, WeDo, WhoWeAre } from "@/components";
 
 const Services = () => {
     return (
@@ -6,6 +6,7 @@ const Services = () => {
             <Startups />
             <WhoWeAre />
             <Strategies />
+            <WeDo />
         </main>
     );
 };

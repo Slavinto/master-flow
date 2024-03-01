@@ -21,3 +21,4 @@ export { default as Faq } from "./faq";
 export { default as Startups } from "./startups";
 export { default as WhoWeAre } from "./who-we-are";
 export { default as Strategies } from "./strategies";
+export { default as WeDo } from "./we-do";

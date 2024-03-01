@@ -212,3 +212,26 @@ export const mostAskedQuestions = [
         answer: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, magnam? Porro consequuntur eligendi maxime similique qui dolore assumenda voluptatibus inventore.",
     },
 ];
+
+export const weDoItems = [
+    {
+        iconPath: "/static/assets/icons/figma.svg",
+        title: "UI Design",
+        text: "With analytics tools, to help you share with current and future clients.",
+    },
+    {
+        iconPath: "/static/assets/icons/services-1.svg",
+        title: "UX Strategy",
+        text: "Total collections, quoting, enrollment, and reporting in Italian and English.",
+    },
+    {
+        iconPath: "/static/assets/icons/shopping-cart.svg",
+        title: "Branding",
+        text: "All services for our team of industry experts, personal training, support line and help desk.",
+    },
+    {
+        iconPath: "/static/assets/icons/services-4.svg",
+        title: "Web Development",
+        text: "We can help you set up and manager your groups if you are become our partner.",
+    },
+];
