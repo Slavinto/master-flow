@@ -3,7 +3,7 @@ import { Button } from ".";
 
 const Startups = () => {
     return (
-        <section className='flex flex-col gap-[22px] container-sm items-center text-center mb-[140px]'>
+        <section className='flex flex-col gap-[22px] container-sm items-center text-center mt-[118px] mb-[140px]'>
             <h1 className='text-[62px] font-semibold max-w-[900px] '>
                 We help startups and agencies to achieve their goal.
             </h1>
