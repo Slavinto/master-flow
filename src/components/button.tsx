@@ -10,7 +10,6 @@ import Link from "next/link";
 const LinkSlot = prepareForSlot(Link);
 
 export default function CustomButton({ title, type, classNames }: ButtonProps) {
-    console.log(title, type, classNames);
     return (
         <>
             {type === "button" ? (

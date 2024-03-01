@@ -1,10 +1,22 @@
+"use client";
+
 import Image from "next/image";
 import { footerItems } from "@/constants";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+    const pathname = usePathname();
+    const isServicesPage = pathname === "/services";
+    console.log(isServicesPage);
     return (
-        <footer className='text-white w-full bg-dark-blue flex flex-col px-[135px] max-container'>
+        <footer
+            className={`${
+                isServicesPage
+                    ? "bg-white text-dark-blue"
+                    : "text-white bg-dark-blue"
+            } flex flex-col w-full px-[135px] max-container`}
+        >
             <div className='flex content-start py-[70px] justify-between max-w-[1073px]'>
                 <div className='flex flex-col gap-4'>
                     <Image
