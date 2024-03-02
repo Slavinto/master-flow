@@ -1,7 +1,12 @@
+import { Platform } from "@/components";
 import React from "react";
 
 const Blog = () => {
-    return <div>Blog</div>;
+    return (
+        <main>
+            <Platform />
+        </main>
+    );
 };
 
 export default Blog;

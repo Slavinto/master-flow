@@ -24,3 +24,4 @@ export { default as Strategies } from "./strategies";
 export { default as WeDo } from "./we-do";
 export { default as OurTeam } from "./our-team";
 export { default as ResourcesForm } from "./resources-form";
+export { default as Platform } from "./platform";

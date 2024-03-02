@@ -23,6 +23,7 @@ const config: Config = {
             "2xl": ["24px", "34px"],
             "3xl": ["28px", "50px"],
             "4xl": ["48px", "60px"],
+            "6xl": ["62px", "72px"],
             "8xl": ["96px", "106px"],
         },
         fontFamily: {
