@@ -1,6 +1,13 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+    "editor.quickSuggestions": {
+        strings: true,
+        other: true,
+        comments: true,
+    },
+    "css.validate": false,
+    "editor.inlineSuggest.enabled": true,
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -29,9 +36,11 @@ const config: Config = {
         extend: {
             colors: {
                 primary: "#175cff",
+                "primary-transparent": "rgba(23, 92, 255, 0.2)",
                 dark: "#57586E",
                 "dark-blue": "#17154b",
                 "darker-blue": "#0A083B",
+                "question-darker-blue": "#242256",
                 "light-gray": "#959ead",
                 "stroke-gray": "#E5E5E5",
                 "stroke-gray2": "#d8d8d8",

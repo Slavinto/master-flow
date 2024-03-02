@@ -81,9 +81,49 @@ main {
     }
 
     .btn-white-rounded {
-        @apply btn btn-white border-stroke-gray rounded-full;
+        @apply btn btn-white border-stroke-gray rounded-full border-[1.4px];
     }
-    /* ================================ */
+
+    .btn-navbar-get-started {
+        @apply btn-white-rounded w-[160px] h-[52px];
+    }
+
+    /* ================================price plan card styles================================ */
+    .card-price {
+        @apply font-semibold text-[40px];
+    }
+    .card-per-month {
+        @apply text-base font-semibold text-dark;
+    }
+    .card-title {
+        @apply leading-8 font-semibold text-[30px];
+    }
+    .card-description {
+        @apply text-[16px] leading-7 font-normal font-sans;
+    }
+    .card-features-text {
+        @apply font-semibold text-[16px] text-darker-blue;
+    }
+    .card-button {
+        @apply btn-white rounded-full border-primary border-[3px] w-full h-[60px];
+    }
+    /* ================================ services section ================================ */
+    .services-title {
+        @apply text-darker-blue font-semibold text-2xl leading-none;
+    }
+    /* ================================ most asked question ================================ */
+    .questions-question {
+        @apply text-white font-bold text-xl tracking-[0.2px];
+    }
+
+    .questions-answer {
+        @apply text-white font-sans text-lg;
+    }
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
+    /* ================================ ================================ */
 }
 
 @layer utilities {
@@ -93,6 +133,15 @@ main {
 
     .subheading {
         @apply font-bold text-sm text-primary pb-4 uppercase tracking-[2px];
+    }
+
+    .subheading-premium-container {
+        @apply font-bold text-sm text-primary bg-primary-transparent px-[15px] py-[7px] uppercase tracking-[1px] rounded-full;
+    }
+
+    /* in 1st section of a page */
+    .page-main-text {
+        @apply font-semibold text-[62px];
     }
 
     .section-main-text {

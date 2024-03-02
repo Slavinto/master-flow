@@ -16,7 +16,11 @@ export default function Home() {
             <Offices />
             <Habits />
             <Experiences />
-            <SubscribeForm />
+            <SubscribeForm
+                textLg='Subscribe to the newsletter!'
+                textSm='Enter your email into form below to get updates from us'
+                textBtn='Submit'
+            />
             <Tricks />
         </main>
     );

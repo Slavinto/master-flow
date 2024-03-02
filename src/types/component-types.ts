@@ -1,10 +1,12 @@
 import { FC } from "react";
 
-export type ButtonComponent = FC<{
+export type ButtonProps = {
     classNames: string;
     title: string;
-    type?: "button" | "submit" | "reset";
-}>;
+    type?: "button" | "link";
+};
+
+export type ButtonComponent = FC<ButtonProps>;
 // ===================================================
 export type PostCardProps = {
     imgUrl: string;
@@ -14,4 +16,30 @@ export type PostCardProps = {
 };
 
 export type PostCard = FC<PostCardProps>;
+// ===================================================
+export type PriceCard = {
+    preferred: boolean;
+    price: number;
+    title: string;
+    description: string;
+    features: string[];
+    buttonText: string;
+};
+
+export type PlanCardProps = { card: PriceCard };
+// ===================================================
+export type AccordionProps = {
+    topText: string;
+    expandedText: string;
+};
+// ===================================================
+export type SubscribeFormProps = {
+    textLg: string;
+    textSm: string;
+    textBtn: string;
+    variant?: "dark" | "light";
+};
+
+// ===================================================
+// ===================================================
 // ===================================================

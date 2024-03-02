@@ -1,7 +1,23 @@
-import React from "react";
+import {
+    OurTeam,
+    ResourcesForm,
+    Startups,
+    Strategies,
+    WeDo,
+    WhoWeAre,
+} from "@/components";
 
 const Services = () => {
-    return <div>Services</div>;
+    return (
+        <main>
+            <Startups />
+            <WhoWeAre />
+            <Strategies />
+            <WeDo />
+            <OurTeam />
+            <ResourcesForm />
+        </main>
+    );
 };
 
 export default Services;
