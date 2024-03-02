@@ -64,7 +64,9 @@ const SubscribeForm = ({
                             title={textBtn}
                             type='button'
                             classNames={`btn-form-primary mr-[6px]${
-                                variant === "dark" && " bg-question-darker-blue"
+                                variant === "dark"
+                                    ? " bg-question-darker-blue"
+                                    : ""
                             }`}
                         />
                     </div>

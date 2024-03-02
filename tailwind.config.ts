@@ -51,6 +51,7 @@ const config: Config = {
                 "3xl": "0 10px 40px rgba(0, 0, 0, 0.1)",
             },
             backgroundColor: {
+                "canvas-darker-blue": "#242256",
                 "gray-canvas": "#E5E5E5",
                 "gray-canvas2": "#f4f4f4",
             },

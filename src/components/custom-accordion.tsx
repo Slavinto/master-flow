@@ -10,7 +10,7 @@ export default function CustomAccordion({
     expandedText,
 }: AccordionProps) {
     return (
-        <Accordion className='bg-darker-blue-transparent flex flex-col border-0 bg-question-darker-blue shadow-none'>
+        <Accordion className='flex flex-col border-0 bg-canvas-darker-blue shadow-none'>
             <AccordionSummary
                 className='border-0 shadow-none'
                 aria-controls='panel1-content'

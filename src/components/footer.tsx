@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const Footer = () => {
     const pathname = usePathname();
     const isServicesPage = pathname === "/services";
-    console.log(isServicesPage);
+
     return (
         <footer
             className={`${
