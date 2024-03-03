@@ -268,3 +268,60 @@ export const teamMembers = [
         jobTitle: "Back-End Developer",
     },
 ];
+
+export const blogPostCards = [
+    {
+        imgUrl: "/static/assets/images/post1.png",
+        category: "products",
+        title: "All our physical products that we have branded and sold",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post2.png",
+        category: "marketing",
+        title: "Our statistics in our latest developed ecommerce",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post3.png",
+        category: "strategy",
+        title: "The strategy we use to reach your goal quickly",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post4.png",
+        category: "strategy",
+        title: "For us, the user experience is the basis of all our projects",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post5.png",
+        category: "minimalism",
+        title: "The applications we design and develop are minimal and clean",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post6.png",
+        category: "agency",
+        title: "Our telephone support is always available 24 hours a day",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post7.png",
+        category: "products",
+        title: "New application available now on the app store and play store",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post8.png",
+        category: "strategy",
+        title: "Wireframes are very important to us, our process",
+        postUrl: "#",
+    },
+    {
+        imgUrl: "/static/assets/images/post9.png",
+        category: "website",
+        title: "Our Master Flow platform is first on the market",
+        postUrl: "#",
+    },
+];
