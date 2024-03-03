@@ -25,23 +25,39 @@ const SubscribeForm = ({
                 alt='shape pattern'
                 width={86}
                 height={102}
-                className='absolute z-0 right-[200px] -top-10'
+                className={`${
+                    variant === "simple-light" ? "hidden " : ""
+                }absolute z-0 right-[200px] -top-10`}
             />
             <div
                 className={`max-h-[462px] bg-${
-                    variant === "light" ? "primary" : "dark-blue"
+                    variant === "light"
+                        ? "primary"
+                        : variant === "simple-light"
+                        ? "gray-canvas2"
+                        : "dark-blue"
                 } py-[135px] px-[290px] relative z-10 flex items-center justify-center rounded`}
             >
                 <form
                     onSubmit={handleSubmit}
-                    className='flex flex-col items-center gap-3 max-w-[615px]'
+                    className={`flex flex-col items-center gap-3 max-w-[617px]`}
                 >
-                    <h2 className='w-full section-main-text text-white'>
+                    <h2
+                        className={`${
+                            variant === "simple-light"
+                                ? "text-darker-blue "
+                                : "text-white "
+                        }w-full section-main-text`}
+                    >
                         {textLg}
                     </h2>
                     <label
                         htmlFor='subscribe-home'
-                        className='article-regular-text !text-white opacity-60'
+                        className={`${
+                            variant === "simple-light"
+                                ? "!text-darker-blue "
+                                : "!text-white "
+                        }article-regular-text opacity-60`}
                     >
                         {textSm}
                     </label>
@@ -66,13 +82,19 @@ const SubscribeForm = ({
                             classNames={`btn-form-primary mr-[6px]${
                                 variant === "dark"
                                     ? " bg-question-darker-blue"
+                                    : variant === "simple-light"
+                                    ? " bg-stroke-gray2 !text-dark"
                                     : ""
                             }`}
                         />
                     </div>
                 </form>
             </div>
-            <div className='z-0 relative -right-[60px] -bottom-[60px] container-sm -mt-[462px] h-[462px] bg-gray-canvas2' />
+            <div
+                className={`${
+                    variant === "simple-light" && "hidden "
+                }z-0 relative -right-[60px] -bottom-[60px] container-sm -mt-[462px] h-[462px] bg-gray-canvas2`}
+            />
         </section>
     );
 };
