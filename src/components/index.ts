@@ -25,3 +25,4 @@ export { default as WeDo } from "./we-do";
 export { default as OurTeam } from "./our-team";
 export { default as ResourcesForm } from "./resources-form";
 export { default as Platform } from "./platform";
+export { default as BlogPosts } from "./blog-posts";

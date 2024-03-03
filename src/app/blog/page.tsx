@@ -1,4 +1,4 @@
-import { Platform, SubscribeForm } from "@/components";
+import { BlogPosts, Platform, SubscribeForm } from "@/components";
 import React from "react";
 
 const Blog = () => {
@@ -11,6 +11,7 @@ const Blog = () => {
                 textBtn='Submit'
                 variant='simple-light'
             />
+            <BlogPosts />
         </main>
     );
 };
