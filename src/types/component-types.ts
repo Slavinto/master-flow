@@ -1,9 +1,9 @@
 import { FC } from "react";
 
 export type ButtonProps = {
-    classNames: string;
     title: string;
-    type?: "button" | "link";
+    type?: "button" | "link" | "submit";
+    classNames: string;
 };
 
 export type ButtonComponent = FC<ButtonProps>;

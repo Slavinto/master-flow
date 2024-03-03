@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Search from "./search";
 
 const Platform = () => {
     return (
@@ -20,7 +21,9 @@ const Platform = () => {
                     there together with your goal of your company or startup.
                     Always new content. This is Master Flow.
                 </p>
-                <div className='pt-2.5 w-full bg-canvas-darker-blue'></div>
+                <div className='pt-2.5 w-full'>
+                    <Search />
+                </div>
             </article>
         </section>
     );
