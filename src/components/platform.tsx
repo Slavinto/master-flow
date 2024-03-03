@@ -3,7 +3,7 @@ import Search from "./search";
 
 const Platform = () => {
     return (
-        <section className='flex justify-between mt-12 mb-[200px]'>
+        <section className='flex justify-between mt-12 mb-[200px] items-center'>
             <div className='relative'>
                 <div className='bg-dark-blue absolute z-0 -bottom-[60px] -left-[60px] w-[560px] h-[560px]' />
                 <Image
