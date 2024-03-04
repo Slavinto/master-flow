@@ -1,11 +1,14 @@
-import { Pagination as MuiPagination } from "@mui/material";
+"use client";
 
-const Pagination = () => {
+import * as React from "react";
+import Pagination from "@mui/material/Pagination";
+
+import { handleChangePagination } from "@/utils/handler-server-actions";
+
+const page = 1;
+
+export default function PaginationSize() {
     return (
-        <section className='w-full text-center'>
-            <MuiPagination />
-        </section>
+        <Pagination count={10} page={page} onChange={handleChangePagination} />
     );
-};
-
-export default Pagination;
+}
