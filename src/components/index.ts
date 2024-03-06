@@ -28,3 +28,4 @@ export { default as Platform } from "./platform";
 export { default as BlogPosts } from "./blog-posts";
 export { default as Pagination } from "./pagination";
 export { default as ButtonSubmit } from "./button-submit";
+export { default as SearchResultCard } from "./search-result-card";

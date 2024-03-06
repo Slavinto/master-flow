@@ -3,8 +3,9 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { handleSearchSubmit } from "@/utils/handler-server-actions";
-import { BlogPostCard, ButtonSubmit } from ".";
-import { useFormState } from "react-dom";
+import { ButtonSubmit, SearchResultCard } from ".";
+import { useFormState, useFormStatus } from "react-dom";
+import { useState } from "react";
 
 import { blogPostCards } from "@/constants";
 
@@ -12,6 +13,7 @@ const Search = () => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
+    const [query, setQuery] = useState("");
 
     const [formState, action] = useFormState(handleSearchSubmit, {
         query: "",
@@ -22,19 +24,23 @@ const Search = () => {
             },
         ],
     });
+
+    const { data } = useFormStatus();
+    console.log({ data });
     const handleInputChange = (term: string) => {
         const params = new URLSearchParams(searchParams);
         if (term) {
             params.set("query", term.toLowerCase());
-            // setQuery(params.get("query")?.toString() || "");
+            setQuery(params.get("query")?.toString() || "");
         } else {
             params.delete("query");
         }
 
         replace(`${pathname}?${params.toString()}`);
     };
+
     return (
-        <div>
+        <div className='flex flex-col gap-4'>
             <form action={action} className='flex gap-3'>
                 <div className='flex gap-3 rounded-full w-full border-[2px] border-stroke-gray px-6 max-w-[304px]'>
                     <Image
@@ -57,22 +63,29 @@ const Search = () => {
                     classNames='btn-primary-rounded border-0'
                 />
             </form>
-            <div className='flex'>
-                {formState.searchResults.map((r) => {
-                    const card = blogPostCards.find((c) => c.postUrl === r.id);
-                    console.log({ ...card });
-                    return (
-                        (
-                            <BlogPostCard
+            <div className='flex flex-col max-h-[300px] overflow-auto'>
+                {!query ? (
+                    <></>
+                ) : formState.searchResults.length > 0 &&
+                  formState.searchResults[0].id &&
+                  formState.searchResults[0].article ? (
+                    formState.searchResults.map((r) => {
+                        const card = blogPostCards.find(
+                            (c) => c.postUrl === r.id
+                        );
+                        return (
+                            <SearchResultCard
                                 key={r.id}
                                 title={card?.title || ""}
                                 imgUrl={card?.imgUrl || ""}
                                 category={card?.category || ""}
                                 postUrl='#'
                             />
-                        ) || ""
-                    );
-                })}
+                        );
+                    })
+                ) : (
+                    <></>
+                )}
             </div>
         </div>
     );
