@@ -41,5 +41,20 @@ export type SubscribeFormProps = {
 };
 
 // ===================================================
+export type ButtonSubmitProps = {
+    label: string;
+    loading: string;
+    classNames: string;
+};
+
 // ===================================================
+export type BlogArticle = {
+    id: string;
+    article: string;
+};
+
+export type SearchResults = {
+    query: string;
+    searchResults: BlogArticle[];
+};
 // ===================================================
