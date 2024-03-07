@@ -1,5 +1,5 @@
 import { blogPostCards } from "@/constants";
-import { BlogPostCard, Pagination } from ".";
+import { BlogPostCard } from ".";
 
 const BlogPosts = () => {
     return (
@@ -15,7 +15,6 @@ const BlogPosts = () => {
                     />
                 ))}
             </div>
-            <Pagination />
         </section>
     );
 };

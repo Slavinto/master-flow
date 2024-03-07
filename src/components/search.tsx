@@ -26,7 +26,7 @@ const Search = () => {
     });
 
     const { data } = useFormStatus();
-    console.log({ data });
+
     const handleInputChange = (term: string) => {
         const params = new URLSearchParams(searchParams);
         if (term) {
