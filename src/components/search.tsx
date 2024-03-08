@@ -31,6 +31,7 @@ const Search = () => {
         const params = new URLSearchParams(searchParams);
         if (term) {
             params.set("query", term.toLowerCase());
+            params.get("page") !== "1" && params.set("page", "1");
             setQuery(params.get("query")?.toString() || "");
         } else {
             params.delete("query");

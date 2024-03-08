@@ -326,6 +326,30 @@ export const blogPostCards = [
         title: "Our Master Flow platform is first on the market",
         postUrl: "9",
     },
+    {
+        imgUrl: "/static/assets/images/post7.png",
+        category: "products",
+        title: "New application available now on the app store and play store",
+        postUrl: "10",
+    },
+    {
+        imgUrl: "/static/assets/images/post8.png",
+        category: "strategy",
+        title: "Wireframes are very important to us, our process",
+        postUrl: "11",
+    },
+    {
+        imgUrl: "/static/assets/images/post9.png",
+        category: "website",
+        title: "Our Master Flow platform is first on the market",
+        postUrl: "12",
+    },
+    {
+        imgUrl: "/static/assets/images/post9.png",
+        category: "website",
+        title: "Our Master Flow platform is first on the market",
+        postUrl: "13",
+    },
 ];
 
 export const articles: BlogArticle[] = [

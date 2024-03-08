@@ -19,6 +19,7 @@ export const handleSearchSubmit = async (
     };
 };
 
-export const handleChangePagination = async () => {
+export const handleChangePagination = async (target: any) => {
+    console.log(target);
     return;
 };

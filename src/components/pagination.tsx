@@ -2,7 +2,7 @@
 
 import Pagination from "@mui/material/Pagination";
 import { PaginationItem } from "@mui/material";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 import { handleChangePagination } from "@/utils/handler-server-actions";
 import Link from "next/link";
@@ -17,18 +17,23 @@ export default function CustomPagination({
 }) {
     const pathname = usePathname();
     const searchParams = useSearchParams();
+    const { replace } = useRouter();
 
     const createPageURL = (pageNumber: number) => {
         const params = new URLSearchParams(searchParams);
+        console.log(pageNumber);
         params.set("page", pageNumber.toString());
-        return `${pathname}?${params}`;
+        replace(`${pathname}?${params}`, { scroll: false });
     };
 
     return (
         <Pagination
             page={page}
             count={totalPages}
-            onChange={handleChangePagination}
+            onChange={(e, page) =>
+                createPageURL(typeof page === "string" ? parseInt(page) : page)
+            }
+            className='py-8'
         />
     );
 }

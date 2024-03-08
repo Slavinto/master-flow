@@ -1,5 +1,5 @@
 import { BlogPosts, Pagination, Platform, SubscribeForm } from "@/components";
-import { articles } from "@/constants";
+import { articles, blogPostCards as allCards } from "@/constants";
 
 const Blog = async ({
     searchParams,
@@ -11,17 +11,24 @@ const Blog = async ({
 }) => {
     const cardsPerPage = 4;
     const currentPage = Number(searchParams?.page) || 1;
-    const totalPages = Math.ceil(articles.length / cardsPerPage);
+    const totalPages = Math.ceil(allCards.length / cardsPerPage);
 
-    const query = searchParams?.query || "";
+    const lastIdx = allCards.length - 1;
 
-    console.log(query, currentPage);
+    const endIdx =
+        cardsPerPage * currentPage - 1 > lastIdx
+            ? lastIdx
+            : cardsPerPage * currentPage - 1;
 
-    const handleSearchSubmit = async (query: string) => {
-        console.log({ query });
-        return { query };
-    };
+    const startIdx =
+        endIdx !== lastIdx
+            ? endIdx - (cardsPerPage - 1)
+            : cardsPerPage * currentPage - cardsPerPage;
 
+    const blogPostCards = allCards.slice(startIdx, endIdx + 1);
+
+    // console.log(blogPostCards);
+    // console.log(startIdx, endIdx);
     return (
         <main>
             <Platform />
@@ -31,7 +38,7 @@ const Blog = async ({
                 textBtn='Submit'
                 variant='simple-light'
             />
-            <BlogPosts />
+            <BlogPosts blogPostCards={blogPostCards} />
             <Pagination page={currentPage} totalPages={totalPages} />
         </main>
     );
