@@ -54,7 +54,8 @@ export type BlogArticle = {
 };
 
 export type SearchResults = {
-    query: string;
-    searchResults: BlogArticle[];
+    query?: string;
+    searchResults?: BlogArticle[];
+    cards?: PostCardProps[];
 };
 // ===================================================

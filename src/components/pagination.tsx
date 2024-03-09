@@ -1,12 +1,7 @@
 "use client";
 
 import Pagination from "@mui/material/Pagination";
-import { PaginationItem } from "@mui/material";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
-import { handleChangePagination } from "@/utils/handler-server-actions";
-import Link from "next/link";
-import { BlogPosts } from ".";
 
 export default function CustomPagination({
     page,
@@ -33,7 +28,7 @@ export default function CustomPagination({
             onChange={(e, page) =>
                 createPageURL(typeof page === "string" ? parseInt(page) : page)
             }
-            className='py-8'
+            className='py-8 flex justify-center'
         />
     );
 }
