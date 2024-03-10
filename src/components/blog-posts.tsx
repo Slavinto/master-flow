@@ -4,7 +4,7 @@ import { BlogPostCard } from ".";
 
 const BlogPosts = ({ blogPostCards }: { blogPostCards: PostCardProps[] }) => {
     return (
-        <section className='flex flex-col gap-[120px]'>
+        <section className='flex flex-col gap-[120px] pt-4'>
             <div className='grid grid-cols-3 gap-x-[60px] gap-y-[80px]'>
                 {blogPostCards.map((card) => (
                     <BlogPostCard

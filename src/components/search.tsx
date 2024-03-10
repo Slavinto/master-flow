@@ -3,17 +3,13 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { handleSearchSubmit } from "@/utils/handler-server-actions";
-import { BlogPosts, ButtonSubmit, Pagination, SearchResultCard } from ".";
-import { useFormState, useFormStatus } from "react-dom";
-import { useState } from "react";
-
-// import { blogPostCards } from "@/constants";
+import { BlogPosts, Button, ButtonSubmit, Pagination } from ".";
+import { useFormState } from "react-dom";
 
 const Search = () => {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const { replace } = useRouter();
-
     const [formState, action] = useFormState(handleSearchSubmit, {});
 
     const handleInputChange = (term: string) => {
@@ -27,6 +23,11 @@ const Search = () => {
 
         replace(`${pathname}?${params.toString()}`, { scroll: false });
     };
+
+    // const handleResetQuery = () => {
+    //     const params = new URLSearchParams();
+    //     replace(`${pathname}`, { scroll: false });
+    // };
 
     const currentPage = Number(searchParams.get("page")) || 1;
     const query = searchParams.get("query") || "";
@@ -49,12 +50,13 @@ const Search = () => {
             : cardsPerPage * currentPage - cardsPerPage;
 
     const blogPostCards = allCards.slice(startIdx, endIdx + 1);
-    // console.log(allCards);
-    console.log(startIdx, endIdx, blogPostCards);
 
     return (
-        <div className='flex flex-col gap-4 my-[140px]'>
-            <form action={action} className='flex gap-3 self-center'>
+        <div className='flex flex-col grow shrink-0 mt-[40px] mb-[140px] p-4'>
+            <form
+                action={action}
+                className='flex grow shrink-0 gap-3 self-center'
+            >
                 <div className='flex gap-3 rounded-full w-full border-[2px] bg-white border-stroke-gray px-6 max-w-[304px]'>
                     <Image
                         src={"/static/assets/icons/search.svg"}
@@ -63,6 +65,7 @@ const Search = () => {
                         height={17}
                     />
                     <input
+                        id='search-input'
                         className='outline-none text-dark font-medium text-[17px] bg-white'
                         placeholder='Search article...'
                         name='query'
@@ -75,40 +78,20 @@ const Search = () => {
                     loading='Searching...'
                     classNames='btn-primary-rounded border-0'
                 />
+                {/* <Button
+                    type='reset'
+                    classNames='btn-white-reset'
+                    onClick={() => ref.current?.reset()}
+                /> */}
             </form>
-            {query && <BlogPosts blogPostCards={blogPostCards} />}
             {blogPostCards.length > 0 && query && (
-                <Pagination page={currentPage} totalPages={totalPages} />
+                <>
+                    <BlogPosts blogPostCards={blogPostCards} />
+                    <Pagination page={currentPage} totalPages={totalPages} />
+                </>
             )}
         </div>
     );
 };
 
 export default Search;
-
-{
-    /* <div className='flex flex-col max-h-[300px] overflow-auto'>
-{!query ? (
-    <></>
-) : formState.searchResults.length > 0 &&
-  formState.searchResults[0].id &&
-  formState.searchResults[0].article ? (
-    formState.searchResults.map((r) => {
-        const card = blogPostCards.find(
-            (c) => c.postUrl === r.id
-        );
-        return (
-            <SearchResultCard
-                key={r.id}
-                title={card?.title || ""}
-                imgUrl={card?.imgUrl || ""}
-                category={card?.category || ""}
-                postUrl='#'
-            />
-        );
-    })
-) : (
-    <></>
-)}
-</div> */
-}

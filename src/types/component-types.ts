@@ -1,9 +1,10 @@
 import { FC } from "react";
 
 export type ButtonProps = {
-    title: string;
-    type?: "button" | "link" | "submit";
-    classNames: string;
+    title?: string;
+    type?: "button" | "link" | "submit" | "reset";
+    classNames?: string;
+    onClick: () => void;
 };
 
 export type ButtonComponent = FC<ButtonProps>;

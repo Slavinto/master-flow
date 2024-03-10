@@ -84,6 +84,10 @@ main {
         @apply btn btn-white border-stroke-gray rounded-full border-[1.4px];
     }
 
+    .btn-white-reset {
+        @apply btn-white-rounded w-[62px] shrink-0 grow flex items-center justify-center;
+    }
+
     .btn-navbar-get-started {
         @apply btn-white-rounded w-[160px] h-[52px];
     }

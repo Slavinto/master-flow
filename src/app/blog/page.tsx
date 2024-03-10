@@ -14,7 +14,7 @@ const Blog = async ({
         <main>
             <Platform />
 
-            <div className='pt-2.5 w-full'>
+            <div className='flex w-full'>
                 <Search />
             </div>
 

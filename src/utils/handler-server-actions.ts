@@ -8,7 +8,7 @@ export const handleSearchSubmit = async (
     formData: FormData
 ): Promise<SearchResults> => {
     const query = formData.get("query")?.toString().toLowerCase() || "";
-
+    console.log({ ...formData });
     const found = articles.filter((a) =>
         a.article.toLowerCase().includes(query)
     );
