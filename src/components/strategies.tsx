@@ -7,7 +7,7 @@ const Strategies = () => {
 
             <Image
                 className='relative z-10 ml-[125px]'
-                src='/static/assets/images/image6.png'
+                src='/static/assets/images/Image6.png'
                 alt='a hand with a book'
                 width={455}
                 height={542}

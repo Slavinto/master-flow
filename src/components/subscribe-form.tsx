@@ -36,7 +36,7 @@ const SubscribeForm = ({
                         : variant === "simple-light"
                         ? "gray-canvas2"
                         : "dark-blue"
-                } py-[135px] px-[290px] relative z-10 flex items-center justify-center rounded`}
+                } py-[135px] text-center relative z-10 flex items-center justify-center rounded`}
             >
                 <form
                     onSubmit={handleSubmit}
