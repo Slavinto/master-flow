@@ -5,14 +5,14 @@ const Offices = () => {
         <section className='self-start flex gap-[71px] max-w-[1113px] mb-36 items-center'>
             <div className='relative w-[585px] h-[576px]'>
                 <Image
-                    src={"/static/assets/images/image.png"}
+                    src={"/static/assets/images/Image.png"}
                     alt='cafe image'
                     width={322}
                     height={450}
                     className='absolute left-0 top-0 drop-shadow-xl'
                 />
                 <Image
-                    src={"/static/assets/images/image-1.png"}
+                    src={"/static/assets/images/Image-1.png"}
                     alt='cafe image'
                     width={387}
                     height={430}

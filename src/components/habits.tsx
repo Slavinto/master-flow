@@ -34,7 +34,7 @@ const Habits = () => {
                 </article>
                 <div className='relative'>
                     <Image
-                        src={"/static/assets/images/image7.png"}
+                        src={"/static/assets/images/Image7.png"}
                         alt='a smiling man at the table'
                         width={455}
                         height={542}
