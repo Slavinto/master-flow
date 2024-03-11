@@ -5,18 +5,13 @@ import { RxReload } from "react-icons/rx";
 
 import { ButtonProps } from "@/types";
 
-export default function CustomButton({
-    title,
-    type,
-    classNames,
-    onClick,
-}: ButtonProps) {
+export default function CustomButton({ title, type, classNames }: ButtonProps) {
     return (
         <>
             {type === "button" ? (
                 <Button className={classNames}>{title}</Button>
             ) : type === "reset" ? (
-                <Button className={classNames} onClick={onClick}>
+                <Button className={classNames}>
                     <RxReload className='w-7 h-7' />
                 </Button>
             ) : (
