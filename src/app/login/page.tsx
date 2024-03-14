@@ -1,19 +1,27 @@
-import React from "react";
+import { login, signup } from "./actions";
 
-const Login = async () => {
-    const loginUser = async (formData: FormData) => {
-        "use server";
-        console.log({ formData });
-    };
-
+export default function LoginPage() {
     return (
-        <div>
-            <form action={loginUser}>
-                <input className='border-slate-500 border-2' name='login' />
-                <input className='border-slate-500 border-2' name='password' />
+        <main>
+            <form className='flex flex-col gap-8 m-auto py-[30px]'>
+                <div className='flex gap-2'>
+                    <label htmlFor='email'>Email:</label>
+                    <input id='email' name='email' type='email' required />
+                </div>
+                <div className='flex gap-2'>
+                    <label htmlFor='password'>Password:</label>
+                    <input
+                        id='password'
+                        name='password'
+                        type='password'
+                        required
+                    />
+                </div>
+                <div className='flex gap-2 justify-between'>
+                    <button formAction={login}>Log in</button>
+                    <button formAction={signup}>Sign up</button>
+                </div>
             </form>
-        </div>
+        </main>
     );
-};
-
-export default Login;
+}

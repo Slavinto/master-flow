@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Footer, Navbar, SessionProvider } from "@/components";
 import { getServerSession } from "next-auth";
+import { createClient } from "@/utils/supabase/server";
+import DbAuthContextProvider from "@/components/context/DbAuthContextProvider";
 
 export const metadata: Metadata = {
     // company name
@@ -16,14 +18,25 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const supabase = createClient();
+
+    const {
+        data: { user },
+    } = await supabase.auth.getUser();
+
+    const { data: planCards } = await supabase.from("planCards").select();
+    // console.log({ user });
+    // console.log({ planCards });
     const session = await getServerSession();
     return (
         <html lang='en'>
             <body>
                 <SessionProvider session={session}>
-                    <Navbar />
-                    {children}
-                    <Footer />
+                    <DbAuthContextProvider dbUser={user}>
+                        <Navbar />
+                        {children}
+                        <Footer />
+                    </DbAuthContextProvider>
                 </SessionProvider>
             </body>
         </html>

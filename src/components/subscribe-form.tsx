@@ -40,7 +40,7 @@ const SubscribeForm = ({
             >
                 <form
                     onSubmit={handleSubmit}
-                    className={`flex flex-col items-center gap-3 max-w-[617px]`}
+                    className={`flex flex-col items-center gap-3 max-w-[700px]`}
                 >
                     <h2
                         className={`${
