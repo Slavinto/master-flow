@@ -15,7 +15,7 @@ const Profile = async () => {
 
     if (!session || !session?.user) {
         if (!user) {
-            redirect("/api/auth/signin");
+            redirect("/");
         }
     }
     // console.log({ session });

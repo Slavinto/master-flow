@@ -2,41 +2,20 @@
 
 import { navbarItems } from "@/constants";
 
-import { usePathname } from "next/navigation";
-import { signIn, signOut, useSession } from "next-auth/react";
-import { createClient } from "@/utils/supabase/client";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-import { Button } from ".";
 import { BurgerMenu } from ".";
-import { SetStateAction, useEffect, useState } from "react";
 import { useDbAuthContext } from "./context/DbAuthContextProvider";
+import { UserLinks } from ".";
+import { useSession } from "next-auth/react";
 
 const Navbar = () => {
     const pathname = usePathname();
     const { data: session } = useSession();
-
+    const router = useRouter();
     const dbUser = useDbAuthContext();
-    console.log({ dbUser });
-    // const supabase = createClient();
-    // const [dbUser, setDbUser] = useState<SetStateAction<any>>();
-
-    // console.log({ dbUser });
-    // useEffect(() => {
-    //     const getUser = async () => {
-    //         try {
-    //             const { data: userData, error: userError } =
-    //                 await supabase.auth.getUser();
-    //             if (!userError) {
-    //                 setDbUser(userData?.user);
-    //             }
-    //         } catch (error) {
-    //             console.log(JSON.stringify(error));
-    //         }
-    //     };
-    //     getUser();
-    // }, []);
 
     return (
         <nav className='relative bg-white z-10 padding-x w-full flex items-center justify-between h-[132px] text-thin max-w-[1440px] mx-auto'>
@@ -68,43 +47,7 @@ const Navbar = () => {
             <Link href={"/login"}>
                 <button className='btn-primary-rounded'>Test Supabase</button>
             </Link>
-            <div className='flex-lg'>
-                {session?.user?.name || dbUser ? (
-                    <>
-                        <Link
-                            href='/profile'
-                            className={
-                                pathname === "/profile"
-                                    ? "text-page-active"
-                                    : ""
-                            }
-                        >
-                            My&nbsp;Profile
-                        </Link>
-                        <Link
-                            onClick={() => {
-                                if (dbUser) {
-                                    const { error } =
-                                        await supabase.auth.signOut();
-                                }
-                                signOut();
-                            }}
-                            href=''
-                        >
-                            Log&nbsp;Out
-                        </Link>
-                    </>
-                ) : (
-                    <Link onClick={() => signIn()} href='#'>
-                        Log&nbsp;In
-                    </Link>
-                )}
-                <Button
-                    title={"Get Started"}
-                    type='button'
-                    classNames='btn-navbar-get-started'
-                />
-            </div>
+            <UserLinks dbUser={dbUser} session={session} />
             <BurgerMenu />
         </nav>
     );

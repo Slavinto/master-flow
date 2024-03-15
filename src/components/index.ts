@@ -29,3 +29,4 @@ export { default as BlogPosts } from "./blog-posts";
 export { default as Pagination } from "./pagination";
 export { default as ButtonSubmit } from "./button-submit";
 export { default as SearchResultCard } from "./search-result-card";
+export { default as UserLinks } from "./user-links";

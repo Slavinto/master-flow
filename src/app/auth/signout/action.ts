@@ -1,8 +1,9 @@
+"use server";
+
 import { createClient } from "@/utils/supabase/server";
 
-export async function GET(request: Request) {
+export async function signOutFromSupabase() {
     const supabase = createClient();
     const { error } = await supabase.auth.signOut();
-
-    // return new Response.json();
+    console.log({ error });
 }
