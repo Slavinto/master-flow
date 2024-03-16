@@ -1,22 +1,29 @@
 import Link from "next/link";
-import React from "react";
+import React, { ReactNode } from "react";
 import { Button } from ".";
 import { usePathname } from "next/navigation";
 import { useRouter } from "next/navigation";
 import { signIn, signOut } from "next-auth/react";
+import { DefaultSession } from "next-auth";
 import { signOutFromSupabase } from "@/app/auth/signout/action";
 
-const UserLinks = ({ dbUser, session }: { dbUser: any; session: any }) => {
+const UserLinks = ({
+    dbUser,
+    session,
+}: {
+    dbUser: object;
+    session: DefaultSession | null;
+}) => {
     const pathname = usePathname();
-    const router = useRouter();
-    const handleClickLogout = () => {
+    const { replace } = useRouter();
+
+    const handleClickLogout = async () => {
         if (dbUser) {
-            signOutFromSupabase();
-        } else {
-            signOut();
+            await signOutFromSupabase();
         }
+        signOut();
         if (pathname !== "/") {
-            router.push("/", { scroll: false });
+            replace("/", { scroll: false });
         }
     };
 
@@ -37,9 +44,12 @@ const UserLinks = ({ dbUser, session }: { dbUser: any; session: any }) => {
                     </Link>
                 </>
             ) : (
-                <Link onClick={() => signIn()} href='#'>
-                    Log&nbsp;In
-                </Link>
+                <>
+                    <Link onClick={() => signIn()} href='#'>
+                        Log&nbsp;In
+                    </Link>
+                    <Link href='/signup'>Sign&nbsp;Up</Link>
+                </>
             )}
             <Button
                 title={"Get Started"}

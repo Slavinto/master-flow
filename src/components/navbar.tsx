@@ -2,7 +2,7 @@
 
 import { navbarItems } from "@/constants";
 
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -14,9 +14,7 @@ import { useSession } from "next-auth/react";
 const Navbar = () => {
     const pathname = usePathname();
     const { data: session } = useSession();
-    const router = useRouter();
     const dbUser = useDbAuthContext();
-
     return (
         <nav className='relative bg-white z-10 padding-x w-full flex items-center justify-between h-[132px] text-thin max-w-[1440px] mx-auto'>
             <Image
@@ -44,9 +42,9 @@ const Navbar = () => {
                     );
                 })}
             </ul>
-            <Link href={"/login"}>
+            {/* <Link href={"/login"}>
                 <button className='btn-primary-rounded'>Test Supabase</button>
-            </Link>
+            </Link> */}
             <UserLinks dbUser={dbUser} session={session} />
             <BurgerMenu />
         </nav>

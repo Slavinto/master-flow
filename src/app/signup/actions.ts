@@ -5,6 +5,40 @@ import { redirect } from "next/navigation";
 
 import { createClient } from "@/utils/supabase/server";
 
+export async function nextAuthSupabaseLogin({
+    username,
+    password,
+}: {
+    username: string;
+    password: string;
+}) {
+    const supabase = createClient();
+    const phone = "";
+
+    if (!username || !password) {
+        redirect("/error");
+    }
+
+    const data = {
+        phone,
+        email: username,
+        password,
+    };
+
+    const {
+        data: { user },
+        error,
+    } = await supabase.auth.signInWithPassword(data);
+    console.log({ error });
+    if (error || !user) {
+        redirect("/error");
+    }
+    return user;
+    console.log({ user });
+    revalidatePath("/", "layout");
+    redirect("/");
+}
+
 export async function login(formData: FormData) {
     const supabase = createClient();
 
