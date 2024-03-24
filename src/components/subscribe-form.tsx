@@ -3,8 +3,9 @@
 import { useState, FormEventHandler } from "react";
 import Image from "next/image";
 
-import { Button } from ".";
+import { Button, ButtonSubmit } from ".";
 import { SubscribeFormProps } from "@/types";
+import { createUser } from "@/utils/prisma/script";
 
 const SubscribeForm = ({
     textLg,
@@ -39,7 +40,8 @@ const SubscribeForm = ({
                 } py-[135px] text-center relative z-10 flex items-center justify-center rounded`}
             >
                 <form
-                    onSubmit={handleSubmit}
+                    action={createUser}
+                    // onSubmit={handleSubmit}
                     className={`flex flex-col items-center gap-3 max-w-[700px]`}
                 >
                     <h2
@@ -71,14 +73,15 @@ const SubscribeForm = ({
                         />
                         <input
                             id='subscribe-home'
+                            name='username'
                             placeholder='Write your email...'
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             className='outline-none text-dark shrink-0 grow'
                         />
-                        <Button
-                            title={textBtn}
-                            type='button'
+                        <ButtonSubmit
+                            label={textBtn}
+                            loading={`${textBtn}ing...`}
                             classNames={`btn-form-primary mr-[6px]${
                                 variant === "dark"
                                     ? " bg-question-darker-blue"
