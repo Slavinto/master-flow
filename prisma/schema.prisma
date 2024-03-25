@@ -18,10 +18,10 @@ model User {
   id String @id @default(uuid())
   createdAt DateTime @default(now())
   name String
-  age Int
+  age Int?
   email String @unique
   role Role @default(BASIC)
-  preferences Json
+  preferences Json?
   posts Post[]
   userPreference UserPreference?
 
@@ -45,9 +45,8 @@ model Post {
   id String @id @default(uuid())
   article String
   title String
-  postUrl String
-  imgUrl String
-  category String
+  postUrl String?
+  imgUrl String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   author User @relation(fields: [authorId], references: [id])
@@ -56,8 +55,11 @@ model Post {
 }
 
 // post category
-model Category {
-  id String @id @default(uuid())
-  name String @unique
-  posts Post[]
+enum Category {
+  Products
+  Marketing
+  Strategy
+  Minimalism
+  Agency
+  Website
 }

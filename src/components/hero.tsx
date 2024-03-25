@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from ".";
+import { getPostsByUserEmail } from "@/utils/prisma/script";
 
 const Hero = () => {
+    const getPosts = getPostsByUserEmail.bind(null, "bob@prisma.io");
     return (
         <section className='container-sm flex items-center justify-between mt-8 mb-44'>
             <article className='flex flex-col max-w-[500px]'>
@@ -15,18 +17,24 @@ const Hero = () => {
                     blocks designed to carry on with the times with your
                     customers. Modern, minimal blocks with a cool look.
                 </p>
-                <div className='flex gap-4'>
-                    <Button
+                <form className='flex gap-4'>
+                    {/* <Button
                         type='button'
                         title='Get Started'
                         classNames='btn-primary-rounded'
-                    />
+                    /> */}
+                    <button
+                        className='btn-primary-rounded'
+                        formAction={getPosts}
+                    >
+                        TEST PRISMA
+                    </button>
                     <Button
                         type='button'
                         title='Learn More'
                         classNames='btn-white-rounded'
                     />
-                </div>
+                </form>
             </article>
             <div className='flex-center relative w-[560px] h-[660px]'>
                 <Image

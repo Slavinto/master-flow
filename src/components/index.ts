@@ -30,3 +30,4 @@ export { default as Pagination } from "./pagination";
 export { default as ButtonSubmit } from "./button-submit";
 export { default as SearchResultCard } from "./search-result-card";
 export { default as UserLinks } from "./user-links";
+export { default as AddUserForm } from "./add-user-form";

@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth";
 import Image from "next/image";
 import { FaUserCircle } from "react-icons/fa";
 import { createClient } from "@/utils/supabase/server";
+import { AddUserForm } from "@/components";
 
 const Profile = async () => {
     const session = await getServerSession();
@@ -45,6 +46,7 @@ const Profile = async () => {
                         </p>
                     </article>
                 </div>
+                <AddUserForm />
             </section>
         </main>
     );
